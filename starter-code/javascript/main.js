@@ -95,6 +95,9 @@ btnRight.addEventListener('click', function () {
         minUni.innerHTML = "0";
         secDec.innerHTML = "0";
         secUni.innerHTML = "0";
+        milCen.innerHTML = "0";
+        milDec.innerHTML = "0";
+        milUni.innerHTML = "0";
 
         while (splits.firstChild) {
             splits.removeChild(splits.firstChild);

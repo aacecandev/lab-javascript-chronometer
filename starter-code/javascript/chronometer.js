@@ -2,8 +2,9 @@
 // function Chronometer() {
 function Chronometer() {
     this.currentTime = 0;
-    this.intervalId = 0;
     this.currentMilisec = 0;
+    this.intervalId = 0;
+    this.intervalIdMilisec = 0;
     this.minutes = "00";
     this.seconds = "00";
     this.milisecs = "000";
@@ -13,7 +14,6 @@ Chronometer.prototype.startClick = function () {
     var that = this;
     this.intervalId = setInterval(function () {
         that.currentTime++;
-        thatMilisec = that
         setInterval(function () {
             that.currentMilisec++;
             that.setMilliseconds();
@@ -75,6 +75,7 @@ Chronometer.prototype.setTime = function () {
 
 Chronometer.prototype.stopClick = function () {
     clearInterval(this.intervalId);
+    clearInterval(this.intervalIdMilisec);
 };
 
 Chronometer.prototype.resetClick = function () {
